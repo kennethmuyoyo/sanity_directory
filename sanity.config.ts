@@ -11,7 +11,7 @@ export default defineConfig({
   title: 'lavender-eland',
 
   projectId: 'p4vhljql',
-  dataset: 'production',
+  dataset: 'clean',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
