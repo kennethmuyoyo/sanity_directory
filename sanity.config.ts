@@ -6,12 +6,15 @@ import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
 
 const devOnlyPlugins = [getStartedPlugin()]
 
+if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || !process.env.NEXT_PUBLIC_SANITY_DATASET) {
+  throw new Error('Missing Sanity environment variables.');
+}
 export default defineConfig({
   name: 'default',
-  title: 'lavender-eland',
+  title: 'Toolbee',
 
-  projectId: 'p4vhljql',
-  dataset: 'clean',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
