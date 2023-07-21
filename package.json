@@ -38,15 +38,6 @@
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
-  },
-  "env": {
-    "development": {
-      "projectId": "dev_project_id",
-      "dataset": "dev_dataset"
-    },
-    "production": {
-      "projectId": "prod_project_id",
-      "dataset": "prod_dataset"
-    }
   }
+  
 }
